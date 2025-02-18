@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.751.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
