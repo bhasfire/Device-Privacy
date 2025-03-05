@@ -7,24 +7,25 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        #pick-directory {
+        button {
             padding: 8px 12px;
             font-size: 16px;
             background-color: #007BFF;
             color: white;
             border: none;
             cursor: pointer;
+            margin: 10px 5px;
         }
-        #pick-directory:disabled {
+        button:disabled {
             background-color: #aaa;
             cursor: not-allowed;
         }
-        #file-list-container {
+        #file-list-container, #installed-apps-container {
             margin-top: 20px;
             max-height: 500px;
             overflow-y: auto;
         }
-        .file-item {
+        .file-item, .app-item {
             margin: 5px 0;
             display: flex;
             justify-content: space-between;
@@ -39,8 +40,16 @@
 </head>
 <body>
     <h1>Device Privacy Web App</h1>
+    
+    <!-- Button to pick a directory -->
     <button id="pick-directory">Pick Directory</button>
+    
+    <!-- Button to fetch installed apps -->
+    <button id="find-installed-apps">Fetch all installed Apps on my computer</button>
+
+    <!-- Containers to display results -->
     <div id="file-list-container"></div>
+    <div id="installed-apps-container"></div>
 
     <script src="script.js"></script>
 </body>

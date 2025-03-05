@@ -74,3 +74,7 @@ The **DevicePrivacy** feature evaluates the privacy risk of installed applicatio
 ### Why It Matters
 
 This scoring system provides **transparent and actionable insights**, allowing users to **identify, review, and manage** applications based on privacy impact. By proactively assessing privacy risks, users can make informed decisions about the apps installed on their devices.
+
+text dump: 
+
+cd "C:\Users\Boris\Desktop\ECE Courses\Device-Privacy"
