@@ -56,25 +56,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle fetching installed apps
     findInstalledAppsButton.addEventListener("click", async () => {
-        console.log("User clicked Find Installed Apps");
-
         installedAppsContainer.innerHTML = "<p>Fetching installed apps...</p>";
 
         try {
             const response = await fetch("http://localhost:5001/api/privacy/installed-apps");
             const data = await response.json();
 
-            installedAppsContainer.innerHTML = ""; // Clear previous results
+            installedAppsContainer.innerHTML = ""; 
 
             if (data.installedApps.length === 0) {
                 installedAppsContainer.innerHTML = "<p>No installed apps found.</p>";
                 return;
             }
 
-            data.installedApps.forEach(app => {
+            data.installedApps.forEach(async app => {
                 const item = document.createElement("div");
                 item.className = "app-item";
                 item.innerHTML = `<strong>${app.name}</strong> - <small>${app.path}</small>`;
+
+                // Fetch permissions
+                const permissionsResponse = await fetch(`http://localhost:5001/api/privacy/permissions/${encodeURIComponent(app.path)}`);
+                const permissionsData = await permissionsResponse.json();
+                
+                const permissionsList = document.createElement("p");
+                permissionsList.textContent = `Permissions: ${permissionsData.permissions.join(", ")}`;
+                
+                item.appendChild(permissionsList);
                 installedAppsContainer.appendChild(item);
             });
 
@@ -83,4 +90,39 @@ document.addEventListener("DOMContentLoaded", () => {
             installedAppsContainer.innerHTML = "<p>Failed to load installed applications.</p>";
         }
     });
+
+    data.installedApps.forEach(async app => {
+        const item = document.createElement("div");
+        item.className = "app-item";
+    
+        // Fetch permissions
+        const permissionsResponse = await fetch(`http://localhost:5001/api/privacy/permissions/${encodeURIComponent(app.path)}`);
+        const permissionsData = await permissionsResponse.json();
+    
+        const permissionsList = document.createElement("p");
+        permissionsList.textContent = `Permissions: ${permissionsData.permissions.join(", ")}`;
+    
+        // Add app icon
+        const icon = document.createElement("img");
+        icon.style.width = "40px";
+        icon.style.height = "40px";
+        
+        // Try to fetch icon from folder
+        const iconPath = `${app.path}\\icon.ico`;
+        fetch(iconPath).then(response => {
+            if (response.ok) {
+                icon.src = iconPath;
+            } else {
+                icon.src = "default-icon.png"; // Placeholder icon
+            }
+        }).catch(() => {
+            icon.src = "default-icon.png";
+        });
+    
+        item.appendChild(icon);
+        item.innerHTML += `<strong>${app.name}</strong> - <small>${app.path}</small>`;
+        item.appendChild(permissionsList);
+        installedAppsContainer.appendChild(item);
+    });
+    
 });

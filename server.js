@@ -1,5 +1,6 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import privacyRoutes from "./routes/privacyRoutes.js";
 
 const app = express();
 const PORT = 5001;
@@ -20,8 +21,6 @@ app.use(express.json());
 })();
 
 
-// Import Routes
-const privacyRoutes = require("./routes/privacyRoutes");
 app.use("/api/privacy", privacyRoutes);
 
 // Start Server
