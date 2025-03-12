@@ -9,16 +9,16 @@ const PORT = 5001;
 app.use(cors());
 app.use(express.json());
 
-(async () => {
-    const isAdmin = (await import("is-admin")).default;
+// (async () => {
+//     const isAdmin = (await import("is-admin")).default;
 
-    isAdmin().then(admin => {
-        if (!admin) {
-            console.log("⚠️ Please run this script as Administrator.");
-            process.exit(1);
-        }
-    });
-})();
+//     isAdmin().then(admin => {
+//         if (!admin) {
+//             console.log("⚠️ Please run this script as Administrator.");
+//             process.exit(1);
+//         }
+//     });
+// })();
 
 
 app.use("/api/privacy", privacyRoutes);

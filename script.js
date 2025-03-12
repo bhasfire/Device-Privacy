@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // UI Elements
     const findInstalledAppsButton = document.getElementById("find-installed-apps");
+    const findInstalledAppsMacButton = document.getElementById("find-installed-apps-mac");
     const installedAppsContainer = document.getElementById("installed-apps-container");
     const appSearchInput = document.getElementById("app-search");
     const riskFilterSelect = document.getElementById("risk-filter");
@@ -14,24 +15,55 @@ document.addEventListener("DOMContentLoaded", () => {
     let allApps = [];
     let filteredApps = [];
 
-    // Check if app is running on Windows
+    // Check if app is running on Windows or Mac
     const isWindows = navigator.userAgent.indexOf("Windows") !== -1;
-    if (!isWindows) {
-        showWarning("This app is optimized for Windows. Some features may not work on other platforms.");
+    const isMac = navigator.userAgent.indexOf("Mac") !== -1;
+    
+    // Show/hide appropriate buttons based on OS
+    if (findInstalledAppsButton) {
+        findInstalledAppsButton.style.display = isWindows ? "inline-block" : "none";
+    }
+    
+    if (findInstalledAppsMacButton) {
+        findInstalledAppsMacButton.style.display = isMac ? "inline-block" : "none";
+    }
+    
+    // Show appropriate warning for non-supported platforms
+    if (!isWindows && !isMac) {
+        showWarning("This app is optimized for Windows and macOS. Some features may not work on other platforms.");
     }
 
-    // Handle finding installed apps
-    findInstalledAppsButton.addEventListener("click", async () => {
+    // Handle finding installed apps on Windows
+    if (findInstalledAppsButton) {
+        findInstalledAppsButton.addEventListener("click", async () => {
+            await scanInstalledApps("windows");
+        });
+    }
+    
+    // Handle finding installed apps on Mac
+    if (findInstalledAppsMacButton) {
+        findInstalledAppsMacButton.addEventListener("click", async () => {
+            await scanInstalledApps("mac");
+        });
+    }
+    
+    // Shared app scanning function with platform parameter
+    async function scanInstalledApps(platform) {
         showLoading(true);
         clearAppList();
-        showMessage("Scanning for installed applications...");
+        showMessage(`Scanning for installed applications on ${platform}...`);
         
         try {
-            const response = await fetch("http://localhost:5001/api/privacy/installed-apps");
+            // Use platform-specific endpoint
+            const endpoint = platform === "mac" 
+                ? "http://localhost:5001/api/privacy/installed-apps-mac"
+                : "http://localhost:5001/api/privacy/installed-apps";
+                
+            const response = await fetch(endpoint);
             const data = await response.json();
             
             if (!data.installedApps || data.installedApps.length === 0) {
-                showMessage("No installed apps found. Please make sure you're running the server with admin privileges.");
+                showMessage(`No installed apps found on ${platform}. Please make sure you're running the server with appropriate privileges.`);
                 showLoading(false);
                 return;
             }
@@ -44,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showMessage(`Found ${allApps.length} installed applications. Analyzing permissions...`);
             
             // Process apps in batches to avoid UI freezing
-            await processAppsInBatches(allApps, 10);
+            await processAppsInBatches(allApps, 10, platform);
             
             // Update privacy score summary after all apps are processed
             updatePrivacyScoreSummary();
@@ -52,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show message about completion
             showMessage(`Analysis complete! Showing ${filteredApps.length} applications.`);
         } catch (error) {
-            console.error("Error fetching installed apps:", error);
-            showMessage("Failed to load installed applications. Is the server running?");
+            console.error(`Error fetching installed apps for ${platform}:`, error);
+            showMessage(`Failed to load installed applications for ${platform}. Is the server running?`);
         }
         
         showLoading(false);
-    });
+    }
     
     // Search functionality
     if (appSearchInput) {
@@ -74,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Process apps in batches to avoid UI freezing
-    async function processAppsInBatches(apps, batchSize) {
+    async function processAppsInBatches(apps, batchSize, platform) {
         const totalApps = apps.length;
         let processedCount = 0;
         
@@ -83,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const batch = apps.slice(i, i + batchSize);
             
             // Process each app in the batch
-            const promises = batch.map(app => processApp(app));
+            const promises = batch.map(app => processApp(app, platform));
             await Promise.all(promises);
             
             processedCount += batch.length;
@@ -95,10 +127,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Process a single app - fetch permissions and create UI element
-    async function processApp(app) {
+    async function processApp(app, platform) {
         try {
+            // Use platform-specific endpoint for permissions if needed
+            const baseEndpoint = platform === "mac" 
+                ? "http://localhost:5001/api/privacy/permissions-mac/"
+                : "http://localhost:5001/api/privacy/permissions/";
+                
             const permissionsResponse = await fetch(
-                `http://localhost:5001/api/privacy/permissions/${encodeURIComponent(app.path)}`
+                `${baseEndpoint}${encodeURIComponent(app.path)}`
             );
             const permissionsData = await permissionsResponse.json();
             
@@ -307,7 +344,15 @@ document.addEventListener("DOMContentLoaded", () => {
             loadingSpinner.style.display = isLoading ? "block" : "none";
         }
         
-        findInstalledAppsButton.disabled = isLoading;
-        findInstalledAppsButton.textContent = isLoading ? "Scanning..." : "Scan Installed Apps";
+        // Disable all buttons during loading
+        if (findInstalledAppsButton) {
+            findInstalledAppsButton.disabled = isLoading;
+            findInstalledAppsButton.textContent = isLoading ? "Scanning..." : "Scan Windows Apps";
+        }
+        
+        if (findInstalledAppsMacButton) {
+            findInstalledAppsMacButton.disabled = isLoading;
+            findInstalledAppsMacButton.textContent = isLoading ? "Scanning..." : "Scan Mac Apps";
+        }
     }
 });
