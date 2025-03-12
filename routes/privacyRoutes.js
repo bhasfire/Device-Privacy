@@ -1,6 +1,7 @@
 import express from "express";
 import { getInstalledApps } from "../services/installedAppsScannerWindows.js";
 import { getPermissionScore } from "../services/permissionScanner.js";
+import { macGetPermissionScore } from "../services/macPermissionScanner.js";
 import { getMacInstalledApps } from "../services/installedAppsScannerMac.js";
 
 const router = express.Router();
@@ -36,6 +37,18 @@ router.get("/permissions/:appPath", async (req, res) => {
         res.json(result);
     } catch (error) {
         console.error("Error fetching Windows permissions:", error);
+        res.status(500).json({ error: "Unable to determine permissions" });
+    }
+});
+
+router.get("/permissions-mac/:appPath", async (req, res) => {
+    try {
+        const { appPath } = req.params;
+        const decodedPath = decodeURIComponent(appPath);
+        const result = await macGetPermissionScore(decodedPath);
+        res.json(result);
+    } catch (error) {
+        console.error("Error fetching Mac permissions:", error);
         res.status(500).json({ error: "Unable to determine permissions" });
     }
 });
