@@ -1,80 +1,90 @@
-# Device Privacy Web App
+# DevicePrivacy
 
-This project provides a web interface for analyzing the privacy scores of applications installed on a user's system. It uses the File System Access API to read application names and retrieves privacy scores from a DynamoDB database.
-
----
+A privacy analysis tool that scans installed applications on Windows and evaluates their privacy risk based on permissions, DLL usage, and system access patterns.
 
 ## Features
-- Allows users to select directories and list installed applications.
-- Fetches privacy scores from a backend API connected to DynamoDB.
-- Runs as a web application using Node.js and Express.
 
----
+- **Application Scanning**: Automatically detects installed applications on Windows systems
+- **Permission Analysis**: Extracts and analyzes app permissions from manifest files and DLL imports
+- **Privacy Risk Scoring**: Calculates privacy risk scores (0-100) based on requested permissions
+- **User-Friendly Interface**: Visual dashboard showing risk levels and detailed permission information
 
 ## Prerequisites
 
-Ensure you have the following installed:
-
 - **Node.js** (v16 or later)
-- **npm** (comes with Node.js)
-- **AWS DynamoDB Table** (if connecting to AWS)
-
----
+- **Windows OS** (application detection optimized for Windows)
+- **Administrator Privileges** (required for comprehensive app scanning)
 
 ## Installation
 
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd device-privacy-webapp
+   cd device-privacy
    ```
 
-2. Install Required depedencies:
+2. Install dependencies:
+   ```bash
+   npm install express cors xml2js util crypto child_process path fs os pe-library
+   ```
 
-    ```npm install```
+## Running the Application
 
-## Running the Web Application 
+1. Start the server with administrator privileges:
+   ```bash
+   # Windows - Run Command Prompt as Administrator, then:
+   node server.js
+   ```
 
-Start the Backend Server
+2. Open the web application:
+   - Navigate to `http://localhost:5001` in your browser
 
-1. Set up AWS credentials by creating a .env file in the project root
-    ```bash
-    AWS_ACCESS_KEY_ID=your-access-key
-    AWS_SECRET_ACCESS_KEY=your-secret-key
-    AWS_REGION=us-east-2
-    ```
+## How It Works
 
-2. Start the backend server
+### Privacy Risk Scoring Algorithm
 
-```node server.js```
+DevicePrivacy evaluates applications based on:
 
-3. Start the frontend
+1. **Permissions Analysis**:
+   - UWP Apps: Analyzes manifest files for declared capabilities
+   - Desktop Apps: Examines imported DLLs to infer system access patterns
+   - MSI Installers: Evaluates installation behaviors and system modifications
 
-```npx serve -l 3001``` 
+2. **Risk Categorization**:
+   - 🟢 **Low Risk (0-30)**: Minimal privacy concerns
+   - 🟡 **Medium Risk (31-60)**: Some privacy considerations
+   - 🔴 **High Risk (61-100)**: Significant privacy impact
 
-## Privacy Risk Scoring Algorithm
+3. **Detailed Permission Reporting**:
+   - Shows specific permissions with explanations
+   - Identifies high-risk permissions (camera, location, contacts, etc.)
+   - Detects network access capabilities
 
-The **DevicePrivacy** feature evaluates the privacy risk of installed applications by analyzing key risk factors and generating a **privacy risk score** for each app. This score helps users understand how an application may impact their privacy.
+## Project Structure
 
-### How It Works
+```
+DevicePrivacy/
+│
+├── server.js                   // Main server file
+├── routes/
+│   └── privacyRoutes.js        // API routes for privacy scanning
+├── services/
+│   ├── installedAppsScanner.js // Scans for installed applications
+│   └── permissionScanner.js    // Analyzes app permissions
+└── public/
+    ├── index.html              // Web UI
+    └── script.js               // Frontend functionality
+```
 
-1. **Directory Selection**: Users select a folder containing installed applications.
-2. **Metadata Extraction**: The system retrieves application details without accessing sensitive data.
-3. **Risk Factor Analysis**: Each application is evaluated based on:
-   - **Permissions Used**: Access to system resources (e.g., location, contacts, microphone).
-   - **Network Activity**: Internet connections and data transmission behavior.
-   - **Data Collection**: Personal information accessed or shared by the app.
-   - **Process Behavior**: Background activity and system modifications.
-   - **Known Threats**: Matches against security databases for flagged applications.
-4. **Score Calculation**: Each factor is weighted, and an overall **privacy risk score (0-100)** is assigned.
-   - 🟢 **Low Risk (0-30)**: Minimal privacy concerns.
-   - 🟡 **Medium Risk (31-60)**: May require user review.
-   - 🔴 **High Risk (61-100)**: Potential privacy threat.
+## Current Limitations
 
-### Why It Matters
+- Windows-only support (macOS/Linux support planned)
+- Some UWP apps may have restricted access to manifest files
+- Requires administrator privileges for comprehensive scanning
 
-This scoring system provides **transparent and actionable insights**, allowing users to **identify, review, and manage** applications based on privacy impact. By proactively assessing privacy risks, users can make informed decisions about the apps installed on their devices.
+## Future Enhancements
 
-text dump: 
-
-cd "C:\Users\Boris\Desktop\ECE Courses\Device-Privacy"
+- Network traffic analysis
+- Data collection detection
+- Integration with threat intelligence databases
+- Cross-platform support
