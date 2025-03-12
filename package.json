@@ -3,11 +3,18 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.751.0",
     "@aws-sdk/lib-dynamodb": "^3.751.0",
+    "child_process": "^1.0.2",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fs": "^0.0.1-security",
     "is-admin": "^4.0.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
     "pe-library": "^1.0.1",
-    "pe-parser": "^1.0.11"
+    "pe-parser": "^1.0.11",
+    "util": "^0.12.5",
+    "xml2js": "^0.6.2"
   }
 }

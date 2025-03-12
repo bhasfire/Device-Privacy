@@ -1,56 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Device Privacy Web App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevicePrivacy - Privacy Risk Scanner</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #475569;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --success-color: #10b981;
+            --border-color: #e2e8f0;
         }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .description {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
         button {
-            padding: 8px 12px;
-            font-size: 16px;
-            background-color: #007BFF;
+            background-color: var(--primary-color);
             color: white;
             border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            margin: 10px 5px;
+            font-size: 16px;
+            transition: background-color 0.2s;
         }
+        
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        
         button:disabled {
-            background-color: #aaa;
+            background-color: #93c5fd;
             cursor: not-allowed;
         }
-        #file-list-container, #installed-apps-container {
-            margin-top: 20px;
-            max-height: 500px;
-            overflow-y: auto;
+        
+        input, select {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
         }
-        .file-item, .app-item {
-            margin: 5px 0;
+        
+        .app-list {
+            margin-top: 20px;
+        }
+        
+        .app-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #cbd5e1;
+        }
+        
+        .app-item.high-risk {
+            border-left-color: var(--danger-color);
+        }
+        
+        .app-item.medium-risk {
+            border-left-color: var(--warning-color);
+        }
+        
+        .app-item.low-risk {
+            border-left-color: var(--success-color);
+        }
+        
+        .app-header {
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-            padding: 5px;
+            align-items: center;
+            margin-bottom: 10px;
         }
+        
+        .app-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
         .privacy-score {
+            padding: 5px 12px;
+            border-radius: 15px;
             font-weight: bold;
-            color: #555;
+            font-size: 16px;
+            color: white;
+            display: inline-block;
+        }
+        
+        .privacy-score.high-risk {
+            background-color: var(--danger-color);
+        }
+        
+        .privacy-score.medium-risk {
+            background-color: var(--warning-color);
+        }
+        
+        .privacy-score.low-risk {
+            background-color: var(--success-color);
+        }
+        
+        .app-info {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .permissions-list {
+            margin-top: 10px;
+        }
+        
+        .permissions-list h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+        
+        .permissions-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .high-risk-permission {
+            color: var(--danger-color);
+        }
+        
+        .medium-risk-permission {
+            color: var(--warning-color);
+        }
+        
+        .status-message {
+            padding: 10px;
+            background-color: #f1f5f9;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .warning-message {
+            padding: 10px;
+            background-color: #fff3cd;
+            color: #856404;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .no-permissions {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+        
+        #loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin-left: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .summary-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .summary-counts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .risk-count {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        .risk-count .count {
+            font-size: 32px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .risk-count .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .risk-count.high-risk {
+            background-color: var(--danger-color);
+        }
+        
+        .risk-count.medium-risk {
+            background-color: var(--warning-color);
+        }
+        
+        .risk-count.low-risk {
+            background-color: var(--success-color);
         }
     </style>
 </head>
 <body>
-    <h1>Device Privacy Web App</h1>
+    <div class="container">
+        <header>
+            <h1>DevicePrivacy - Privacy Risk Scanner</h1>
+            <div class="description">
+                Analyze installed applications and assess their privacy risks
+            </div>
+        </header>
+        
+        <div class="controls">
+            <button id="find-installed-apps">Scan Installed Apps</button>
+            <div id="loading-spinner"></div>
+            <input type="text" id="app-search" placeholder="Search applications...">
+            <select id="risk-filter">
+                <option value="all">All Risk Levels</option>
+                <option value="high">High Risk</option>
+                <option value="medium">Medium Risk</option>
+                <option value="low">Low Risk</option>
+            </select>
+            <div id="total-count">0 applications</div>
+        </div>
+        
+        <div class="summary-section">
+            <h2>Privacy Risk Summary</h2>
+            <div id="privacy-score-summary">
+                <p>Scan your applications to see the privacy risk summary.</p>
+            </div>
+        </div>
+        
+        <div class="app-list" id="installed-apps-container">
+            <p class="status-message">Click "Scan Installed Apps" to begin the privacy analysis.</p>
+        </div>
+    </div>
     
-    <!-- Button to pick a directory -->
-    <button id="pick-directory">Pick Directory</button>
-    
-    <!-- Button to fetch installed apps -->
-    <button id="find-installed-apps">Fetch all installed Apps on my computer</button>
-
-    <!-- Containers to display results -->
-    <div id="file-list-container"></div>
-    <div id="installed-apps-container"></div>
-
     <script src="script.js"></script>
 </body>
 </html>

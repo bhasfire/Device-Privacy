@@ -1,0 +1,421 @@
+Installed Apps Log
+===================
+Total Apps Found: 139
+
+1. 7-Zip File Manager
+   Path: C:\Program Files\7-Zip\7zFM.exe
+
+2. Access
+   Path: C:\Program Files\Microsoft Office\root\Office16\MSACCESS.EXE
+
+3. Speech Recognition
+   Path: C:\WINDOWS\Speech\Common\sapisvr.exe
+
+4. Remote Desktop Connection
+   Path: C:\WINDOWS\system32\mstsc.exe
+
+5. Steps Recorder
+   Path: C:\WINDOWS\system32\psr.exe
+
+6. Character Map
+   Path: C:\WINDOWS\system32\charmap.exe
+
+7. Wordpad
+   Path: C:\Program Files\Windows NT\Accessories\wordpad.exe
+
+8. dfrgui
+   Path: C:\WINDOWS\system32\dfrgui.exe
+
+9. Disk Cleanup
+   Path: C:\WINDOWS\system32\cleanmgr.exe
+
+10. iSCSI Initiator
+   Path: C:\WINDOWS\system32\iscsicpl.exe
+
+11. Memory Diagnostics Tool
+   Path: C:\WINDOWS\system32\MdSched.exe
+
+12. ODBC Data Sources (32-bit)
+   Path: C:\WINDOWS\syswow64\odbcad32.exe
+
+13. ODBC Data Sources (64-bit)
+   Path: C:\WINDOWS\system32\odbcad32.exe
+
+14. RecoveryDrive
+   Path: C:\WINDOWS\system32\RecoveryDrive.exe
+
+15. Resource Monitor
+   Path: C:\WINDOWS\system32\perfmon.exe
+
+16. Arduino
+   Path: C:\Program Files (x86)\Arduino\arduino.exe
+
+17. Audacity
+   Path: C:\Program Files\Audacity\Audacity.exe
+
+18. Blackmagic RAW Player
+   Path: C:\Program Files (x86)\Blackmagic Design\Blackmagic RAW\Blackmagic RAW Player\BlackmagicRAWPlayer.exe
+
+19. Blackmagic RAW Speed Test
+   Path: C:\Program Files (x86)\Blackmagic Design\Blackmagic RAW\Blackmagic RAW Speed Test\BlackmagicRAWSpeedTest.exe
+
+20. DaVinci Control Panels
+   Path: C:\Program Files (x86)\Blackmagic Design\DaVinci Control Panels\Setup Utility\DaVinci Control Panels Setup.exe
+
+21. Fairlight Studio Utility
+   Path: C:\Program Files (x86)\Blackmagic Design\DaVinci Control Panels\Fairlight Studio Utility\Fairlight Studio Utility.exe
+
+22. Cisco AnyConnect Diagnostics and Reporting Tool
+   Path: C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\DART\DartOffline.exe
+
+23. Cisco AnyConnect Secure Mobility Client
+   Path: C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe
+
+24. CMake (cmake-gui)
+   Path: C:\Program Files\CMake\bin\cmake-gui.exe
+
+25. Uninstall CMake
+   Path: C:\Windows\SysWOW64\msiexec.exe
+
+26. Dropbox
+   Path: C:\Program Files (x86)\Dropbox\Client\Dropbox.exe
+
+27. Excel
+   Path: C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
+
+28. Firefox
+   Path: C:\Program Files\Mozilla Firefox\firefox.exe
+
+29. Git Bash
+   Path: C:\Program Files\Git\git-bash.exe
+
+30. Git CMD
+   Path: C:\Program Files\Git\git-cmd.exe
+
+31. Git GUI
+   Path: C:\Program Files\Git\cmd\git-gui.exe
+
+32. Uninstall Go
+   Path: C:\Windows\SysWOW64\msiexec.exe
+
+33. Google Chrome
+   Path: C:\Program Files\Google\Chrome\Application\chrome.exe
+
+34. Google Drive
+   Path: C:\Program Files\Google\Drive File Stream\104.0.4.0\GoogleDriveFS.exe
+
+35. Google Earth Pro
+   Path: C:\Program Files\Google\Google Earth Pro\client\googleearth.exe
+
+36. About Java
+   Path: C:\Program Files\Java\jre1.8.0_361\bin\javacpl.exe
+
+37. IntelliJ IDEA Community Edition 2022.2
+   Path: C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2022.2\bin\idea64.exe
+
+38. Malwarebytes
+   Path: C:\Program Files\Malwarebytes\Anti-Malware\mbam.exe
+
+39. Database Compare
+   Path: C:\Program Files\Microsoft Office\root\Client\AppVLP.exe
+
+40. Office Language Preferences
+   Path: C:\Program Files\Microsoft Office\root\Office16\SETLANG.EXE
+
+41. Skype for Business Recording Manager
+   Path: C:\Program Files\Microsoft Office\root\Office16\OcPubMgr.exe
+
+42. Spreadsheet Compare
+   Path: C:\Program Files\Microsoft Office\root\Client\AppVLP.exe
+
+43. Telemetry Log for Office
+   Path: C:\Program Files\Microsoft Office\root\Office16\msoev.exe
+
+44. Install Additional Tools for Node.js
+   Path: C:\Windows\System32\cmd.exe
+
+45. Node.js command prompt
+   Path: C:\Windows\System32\cmd.exe
+
+46. Node.js
+   Path: C:\Program Files\nodejs\node.exe
+
+47. Uninstall Node.js
+   Path: C:\Windows\SysWOW64\msiexec.exe
+
+48. GeForce Experience
+   Path: C:\Program Files\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDIA GeForce Experience.exe
+
+49. Nsight Compute 2024.1
+   Path: C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.1.1\host\windows-desktop-win7-x64\ncu-ui.exe
+
+50. Uninstall NVIDIA Nsight Compute 2024.1
+   Path: C:\Windows\SysWOW64\msiexec.exe
+
+51. Nsight Monitor
+   Path: C:\Program Files (x86)\NVIDIA Corporation\Nsight Visual Studio Edition 2024.1\Monitor\Common\Nsight.Monitor.exe
+
+52. OneNote
+   Path: C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
+
+53. Outlook (classic)
+   Path: C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+
+54. PC Health Check
+   Path: C:\Program Files\PCHealthCheck\PCHealthCheck.exe
+
+55. PowerPoint
+   Path: C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
+
+56. Publisher
+   Path: C:\Program Files\Microsoft Office\root\Office16\MSPUB.EXE
+
+57. IDLE (Python 3.11 64-bit)
+   Path: C:\Python311\pythonw.exe
+
+58. Python 3.11 (64-bit)
+   Path: C:\Python311\python.exe
+
+59. Python 3.11 Module Docs (64-bit)
+   Path: C:\Python311\python.exe
+
+60. IDLE (Python 3.9 64-bit)
+   Path: C:\Program Files\Python39\pythonw.exe
+
+61. Python 3.9 (64-bit)
+   Path: C:\Program Files\Python39\python.exe
+
+62. Python 3.9 Module Docs (64-bit)
+   Path: C:\Program Files\Python39\python.exe
+
+63. Razer Synapse
+   Path: C:\Program Files (x86)\Razer\Synapse3\WPFUI\Framework\Razer Synapse 3 Host\Razer Synapse 3.exe
+
+64. LockDown Browser
+   Path: C:\Program Files (x86)\Respondus\LockDown Browser\LockDownBrowser.exe
+
+65. Skype for Business
+   Path: C:\Program Files\Microsoft Office\root\Office16\lync.exe
+
+66. Sticky Notes (new)
+   Path: C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
+
+67. Create USB Recovery
+   Path: C:\Windows\System32\RecoveryDrive.exe
+
+68. Task Manager
+   Path: C:\WINDOWS\system32\taskmgr.exe
+
+69. TurboTax 2024
+   Path: C:\Program Files\TurboTax\Individual 2024\64bit\TurboTax.exe
+
+70. Debuggable Package Manager
+   Path: C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+
+71. Developer Command Prompt for VS 2019
+   Path: C:\Windows\System32\cmd.exe
+
+72. Developer PowerShell for VS 2019
+   Path: C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+
+73. x64 Native Tools Command Prompt for VS 2019
+   Path: C:\Windows\System32\cmd.exe
+
+74. x64 x86 Cross Tools Command Prompt for VS 2019
+   Path: C:\Windows\System32\cmd.exe
+
+75. x86 Native Tools Command Prompt for VS 2019
+   Path: C:\Windows\System32\cmd.exe
+
+76. x86 x64 Cross Tools Command Prompt for VS 2019
+   Path: C:\Windows\System32\cmd.exe
+
+77. Visual Studio Code
+   Path: C:\Program Files\Microsoft VS Code\Code.exe
+
+78. Application Verifier (X64)
+   Path: C:\Windows\System32\appverif.exe
+
+79. Application Verifier (WOW)
+   Path: C:\Windows\SysWOW64\appverif.exe
+
+80. Uninstall WinPcap 4.1
+   Path: C:\Program Files (x86)\WinPcap\Uninstall.exe
+
+81. Word
+   Path: C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE
+
+82. Uninstall Xming
+   Path: C:\Program Files (x86)\Xming\unins000.exe
+
+83. XLaunch
+   Path: C:\Program Files (x86)\Xming\XLaunch.exe
+
+84. Xming
+   Path: C:\Program Files (x86)\Xming\Xming.exe
+
+85. Zoom Workplace
+   Path: C:\Program Files\Zoom\bin\Zoom.exe
+
+86. Uninstall Zwift
+   Path: C:\Program Files (x86)\Zwift\unins000.exe
+
+87. Zwift
+   Path: C:\Program Files (x86)\Zwift\ZwiftLauncher.exe
+
+88. LiveCaptions
+   Path: C:\WINDOWS\system32\LiveCaptions.exe
+
+89. Magnify
+   Path: C:\WINDOWS\system32\magnify.exe
+
+90. Narrator
+   Path: C:\WINDOWS\system32\narrator.exe
+
+91. On-Screen Keyboard
+   Path: C:\WINDOWS\system32\osk.exe
+
+92. VoiceAccess
+   Path: C:\WINDOWS\system32\voiceaccess.exe
+
+93. Administrative Tools
+   Path: C:\WINDOWS\system32\control.exe
+
+94. Blackmagic Proxy Generator Lite
+   Path: C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe
+
+95. DaVinci Resolve
+   Path: C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe
+
+96. CapCut
+   Path: C:\Users\Admin\AppData\Local\CapCut\Apps\CapCut.exe
+
+97. Uninstall
+   Path: C:\Program Files (x86)\Digilent\uninstall.exe
+
+98. Discord
+   Path: C:\Users\Admin\AppData\Local\Discord\Update.exe
+
+99. MaxxAudio Pro by Waves – Speaker and Microphone Audio Control and Nx 3D Sound
+   Path: C:\Windows\System32\DriverStore\FileRepository\wavesapo9de.inf_amd64_d350b8504310bbf5\WavesSvc64.exe
+
+100. Spotify
+   Path: C:\Users\Admin\AppData\Roaming\Spotify\Spotify.exe
+
+101. Xilinx Information Center
+   Path: C:\Xilinx\xic\xic.exe
+
+102. Command Prompt
+   Path: C:\WINDOWS\system32\cmd.exe
+
+103. DocNav
+   Path: C:\Xilinx\DocNav\docnav.exe
+
+104. Uninstall DocNav
+   Path: C:\Xilinx\.xinstall\DocNav\xuninstall.exe
+
+105. Uninstall Xilinx Information Center
+   Path: C:\Xilinx\.xinstall\xic\xuninstall.exe
+
+106. 7-Zip
+   Path: C:\Program Files\7-Zip\7z.exe
+
+107. dotnet
+   Path: C:\Program Files\dotnet\dotnet.exe
+
+108. Git
+   Path: C:\Program Files\Git\git-bash.exe
+
+109. heroku
+   Path: C:\Program Files\heroku\Uninstall.exe
+
+110. LIFT-CS
+   Path: C:\Program Files\LIFT-CS\unins000.exe
+
+111. Mozilla Firefox
+   Path: C:\Program Files\Mozilla Firefox\crashreporter.exe
+
+112. nodejs
+   Path: C:\Program Files\nodejs\node.exe
+
+113. PCHealthCheck
+   Path: C:\Program Files\PCHealthCheck\PCHealthCheck.exe
+
+114. PuTTY
+   Path: C:\Program Files\PuTTY\PuTTY.exe
+
+115. Python39
+   Path: C:\Program Files\Python39\python.exe
+
+116. RUXIM
+   Path: C:\Program Files\RUXIM\DTUDriver.exe
+
+117. WSL
+   Path: C:\Program Files\WSL\WSL.exe
+
+118. Digilent
+   Path: C:\Program Files (x86)\Digilent\uninstall.exe
+
+119. Razer Chroma SDK
+   Path: C:\Program Files (x86)\Razer Chroma SDK\Razer_Chroma_SDK_Uninstaller.exe
+
+120. WinPcap
+   Path: C:\Program Files (x86)\WinPcap\rpcapd.exe
+
+121. 28017CharlesMilette.TranslucentTB 2024.3.0.0 x64
+   Path: C:\Program Files\WindowsApps\28017CharlesMilette.TranslucentTB_2024.3.0.0_x64__v826wp6bftszj\TranslucentTB.exe
+
+122. 5A894077.McAfeeSecurity 2.1.60.0 x64
+   Path: C:\Program Files\WindowsApps\5A894077.McAfeeSecurity_2.1.60.0_x64__wafk5atnkzcwy\mcafee-security.exe
+
+123. AppUp.IntelGraphicsExperience 1.100.5688.0 x64
+   Path: C:\Program Files\WindowsApps\AppUp.IntelGraphicsExperience_1.100.5688.0_x64__8j3eq9eme6ctt\IGCC.exe
+
+124. AppUp.ThunderboltControlCenter 1.0.37.0 x64
+   Path: C:\Program Files\WindowsApps\AppUp.ThunderboltControlCenter_1.0.37.0_x64__8j3eq9eme6ctt\ThunderboltControlApp.exe
+
+125. C27EB4BA.DropboxOEM 23.4.30.0 x64
+   Path: C:\Program Files\WindowsApps\C27EB4BA.DropboxOEM_23.4.30.0_x64__xbfy0k16fey96\DropboxUniversal.exe
+
+126. CanonicalGroupLimited.Ubuntu 2404.1.68.0 x64
+   Path: C:\Program Files\WindowsApps\CanonicalGroupLimited.Ubuntu_2404.1.68.0_x64__79rhkp1fndgsc\ubuntu.exe
+
+127. DellInc.DellCustomerConnect 5.5.5.0 x64
+   Path: C:\Program Files\WindowsApps\DellInc.DellCustomerConnect_5.5.5.0_x64__htrsf667h5kn2\DellCustomerConnect.exe
+
+128. DellInc.DellDigitalDelivery 5.5.0.0 x64
+   Path: C:\Program Files\WindowsApps\DellInc.DellDigitalDelivery_5.5.0.0_x64__htrsf667h5kn2\Dell.D3.UWP.exe
+
+129. DellInc.DellSupportAssistforPCs 3.10.7.0 x64
+   Path: C:\Program Files\WindowsApps\DellInc.DellSupportAssistforPCs_3.10.7.0_x64__htrsf667h5kn2\SupportAssistClientUI.exe
+
+130. DellInc.MyDell 2.2.6.0 x64
+   Path: C:\Program Files\WindowsApps\DellInc.MyDell_2.2.6.0_x64__htrsf667h5kn2\MyDell.exe
+
+131. DellInc.PartnerPromo 1.0.21.0 x64
+   Path: C:\Program Files\WindowsApps\DellInc.PartnerPromo_1.0.21.0_x64__htrsf667h5kn2\PartnerPromo.exe
+
+132. DolbyLaboratories.DolbyAccess 3.26.2580.0 x64
+   Path: C:\Program Files\WindowsApps\DolbyLaboratories.DolbyAccess_3.26.2580.0_x64__rz1tebttyb220\DolbyAccess.exe
+
+133. DolbyLaboratories.DolbyVisionAccess 2.20400.722.0 x64
+   Path: C:\Program Files\WindowsApps\DolbyLaboratories.DolbyVisionAccess_2.20400.722.0_x64__rz1tebttyb220\DVClientApp.exe
+
+134. MSTeams 25031.805.3440.5290 x64
+   Path: C:\Program Files\WindowsApps\MSTeams_25031.805.3440.5290_x64__8wekyb3d8bbwe\ms-teams.exe
+
+135. NVIDIACorp.NVIDIAControlPanel 8.1.967.0 x64
+   Path: C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.967.0_x64__56jybvy8sckqj\nvcplui.exe
+
+136. RivetNetworks.KillerControlCenter 3.1624.1026.0 x64
+   Path: C:\Program Files\WindowsApps\RivetNetworks.KillerControlCenter_3.1624.1026.0_x64__rh07ty8m5nkag\KillerNetworkManagerlauncher.exe
+
+137. ScreenovateTechnologies.DellMobileConnect 3.3.9809.0 x64
+   Path: C:\Program Files\WindowsApps\ScreenovateTechnologies.DellMobileConnect_3.3.9809.0_x64__0vhbc3ng4wbp0\DellMobileConnectUniversalClient.exe
+
+138. SpotifyAB.SpotifyMusic 1.258.498.0 x64
+   Path: C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.258.498.0_x64__zpdnekdrzrea0\Spotify.exe
+
+139. WavesAudio.MaxxAudioProforDell2020 3.0.98.0 x64
+   Path: C:\Program Files\WindowsApps\WavesAudio.MaxxAudioProforDell2020_3.0.98.0_x64__fh4rh281wavaa\MaxxAudioProForDell2020.exe
+
