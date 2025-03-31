@@ -28,12 +28,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func startDaemon() {
         print("Daemon started. Beginning scan...")
         
-        DispatchQueue.global().async {
-            sleep(5)
-            print("Scan complete. Shutting down daemon.")
+        guard let scannerBinaryURL = Bundle.main.url(forResource: "scanner", withExtension: nil) else {
+            print("Scanner binary not found in bundle!")
+            NSApp.terminate(self)
+            return
+        }
+        
+        let process = Process()
+        process.executableURL = scannerBinaryURL
+        process.arguments = []
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        
+        process.terminationHandler = { proc in
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            if let output = String(data: data, encoding: .utf8) {
+                print("Scanner output:\n\(output)")
+            }
             DispatchQueue.main.async {
                 NSApp.terminate(self)
             }
+        }
+        
+        do {
+            try process.run()
+        } catch {
+            print("Error running scanner binary: \(error)")
+            NSApp.terminate(self)
         }
     }
 }
