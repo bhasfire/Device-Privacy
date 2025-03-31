@@ -14,7 +14,8 @@
 		479B40C22D98F9360006C743 /* devicePrivacyMacDaemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B40C12D98F9360006C743 /* devicePrivacyMacDaemonTests.swift */; };
 		479B40CC2D98F9360006C743 /* devicePrivacyMacDaemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B40CB2D98F9360006C743 /* devicePrivacyMacDaemonUITests.swift */; };
 		479B40CE2D98F9360006C743 /* devicePrivacyMacDaemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B40CD2D98F9360006C743 /* devicePrivacyMacDaemonUITestsLaunchTests.swift */; };
-		479B40E32D9A26F00006C743 /* scanner in Resources */ = {isa = PBXBuildFile; fileRef = 479B40E22D9A26EF0006C743 /* scanner */; };
+		479B40EA2D9A302F0006C743 /* scanner.js in Resources */ = {isa = PBXBuildFile; fileRef = 479B40E92D9A302F0006C743 /* scanner.js */; };
+		479B40EC2D9A30340006C743 /* scanner in Resources */ = {isa = PBXBuildFile; fileRef = 479B40EB2D9A30340006C743 /* scanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,9 @@
 		479B40CB2D98F9360006C743 /* devicePrivacyMacDaemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devicePrivacyMacDaemonUITests.swift; sourceTree = "<group>"; };
 		479B40CD2D98F9360006C743 /* devicePrivacyMacDaemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devicePrivacyMacDaemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		479B40DA2D98FCF60006C743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		479B40E22D9A26EF0006C743 /* scanner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = scanner; path = ../../../../../../Desktop/scanner; sourceTree = "<group>"; };
+		479B40E22D9A26EF0006C743 /* scanner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = scanner; sourceTree = "<group>"; };
+		479B40E92D9A302F0006C743 /* scanner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = scanner.js; path = "../../../../scanning scripts/macOS/scanner.js"; sourceTree = "<group>"; };
+		479B40EB2D9A30340006C743 /* scanner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = scanner; path = "../../../../scanning scripts/macOS/scanner"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		479B40AE2D98F9340006C743 /* devicePrivacyMacDaemon */ = {
 			isa = PBXGroup;
 			children = (
+				479B40E42D9A2E660006C743 /* scanner scripts */,
 				479B40E22D9A26EF0006C743 /* scanner */,
 				479B40DA2D98FCF60006C743 /* Info.plist */,
 				479B40AF2D98F9340006C743 /* AppDelegate.swift */,
@@ -124,6 +128,15 @@
 				479B40CD2D98F9360006C743 /* devicePrivacyMacDaemonUITestsLaunchTests.swift */,
 			);
 			path = devicePrivacyMacDaemonUITests;
+			sourceTree = "<group>";
+		};
+		479B40E42D9A2E660006C743 /* scanner scripts */ = {
+			isa = PBXGroup;
+			children = (
+				479B40E92D9A302F0006C743 /* scanner.js */,
+				479B40EB2D9A30340006C743 /* scanner */,
+			);
+			path = "scanner scripts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				479B40E32D9A26F00006C743 /* scanner in Resources */,
 				479B40B42D98F9360006C743 /* Assets.xcassets in Resources */,
 				479B40B72D98F9360006C743 /* Base in Resources */,
+				479B40EA2D9A302F0006C743 /* scanner.js in Resources */,
+				479B40EC2D9A30340006C743 /* scanner in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
