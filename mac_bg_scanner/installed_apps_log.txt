@@ -1,0 +1,479 @@
+Installed Apps Log
+===================
+Total Apps Found: 95
+
+1. Messages Wrapped
+   Path: /Applications/Messages Wrapped.app
+   Version: 0.0.9
+   BundleId: com.seifabdelaziz.messageswrapped
+
+2. Microsoft Teams classic
+   Path: /Applications/Microsoft Teams classic.app
+   Version: 1.00.627656
+   BundleId: com.microsoft.teams
+
+3. Visual Studio Code
+   Path: /Applications/Visual Studio Code.app
+   Version: 1.98.2
+   BundleId: com.microsoft.VSCode
+
+4. Mini Diary
+   Path: /Applications/Mini Diary.app
+   Version: 3.0.1
+   BundleId: com.samuelmeuli.minidiary
+
+5. Steam
+   Path: /Applications/Steam.app
+   Version: 4.0
+   BundleId: com.valvesoftware.steam
+
+6. Google Chrome
+   Path: /Applications/Google Chrome.app
+   Version: 134.0.6998.166
+   BundleId: com.google.Chrome
+
+7. Anki
+   Path: /Applications/Anki.app
+   Version: 2.1.65
+   BundleId: net.ankiweb.dtop
+
+8. ChoreoRoom
+   Path: /Applications/ChoreoRoom.app
+   Version: Unknown
+   BundleId: Unknown
+
+9. Numbers
+   Path: /Applications/Numbers.app
+   Version: 14.3
+   BundleId: com.apple.iWork.Numbers
+
+10. Dropbox
+   Path: /Applications/Dropbox.app
+   Version: 220.4.4126
+   BundleId: com.getdropbox.dropbox
+
+11. IINA
+   Path: /Applications/IINA.app
+   Version: 1.3.3
+   BundleId: com.colliderli.iina
+
+12. Class
+   Path: /Applications/Class.app
+   Version: 2.4.0
+   BundleId: com.classedu.classforzoom
+
+13. Parallels Desktop
+   Path: /Applications/Parallels Desktop.app
+   Version: 19.0.0
+   BundleId: com.parallels.desktop.console
+
+14. OneDrive
+   Path: /Applications/OneDrive.app
+   Version: 25.041.0303
+   BundleId: com.microsoft.OneDrive
+
+15. coconutBattery
+   Path: /Applications/coconutBattery.app
+   Version: 3.9.7
+   BundleId: com.coconut-flavour.coconutBattery
+
+16. Spotify
+   Path: /Applications/Spotify.app
+   Version: 1.2.56.502
+   BundleId: com.spotify.client
+
+17. PyCharm
+   Path: /Applications/PyCharm.app
+   Version: 2021.3.1
+   BundleId: com.jetbrains.pycharm
+
+18. iMovie
+   Path: /Applications/iMovie.app
+   Version: 10.4.2
+   BundleId: com.apple.iMovieApp
+
+19. UltData
+   Path: /Applications/UltData.app
+   Version: 9.7.3
+   BundleId: com.tenorshare.TenorshareUltData
+
+20. Microsoft Word
+   Path: /Applications/Microsoft Word.app
+   Version: 16.95
+   BundleId: com.microsoft.Word
+
+21. server
+   Path: /Applications/server.app
+   Version: 0.0.0
+   BundleId: org.pythonmac.unspecified.server
+
+22. Audacity
+   Path: /Applications/Audacity.app
+   Version: 3.4.2.0
+   BundleId: org.audacityteam.audacity
+
+23. Docker
+   Path: /Applications/Docker.app
+   Version: 4.2.0
+   BundleId: com.docker.docker
+
+24. Safari
+   Path: /Applications/Safari.app
+   Version: 17.0
+   BundleId: com.apple.Safari
+
+25. Arc
+   Path: /Applications/Arc.app
+   Version: 1.87.1
+   BundleId: company.thebrowser.Browser
+
+26. Microsoft Excel
+   Path: /Applications/Microsoft Excel.app
+   Version: 16.95
+   BundleId: com.microsoft.Excel
+
+27. UTM
+   Path: /Applications/UTM.app
+   Version: 4.5.4
+   BundleId: com.utmapp.UTM
+
+28. zoom.us
+   Path: /Applications/zoom.us.app
+   Version: 6.4.3 (52139)
+   BundleId: us.zoom.xos
+
+29. Microsoft Outlook
+   Path: /Applications/Microsoft Outlook.app
+   Version: 16.95
+   BundleId: com.microsoft.Outlook
+
+30. GitHub Desktop
+   Path: /Applications/GitHub Desktop.app
+   Version: 3.4.15
+   BundleId: com.github.GitHubClient
+
+31. CP210xVCPDriver
+   Path: /Applications/CP210xVCPDriver.app
+   Version: 1.0
+   BundleId: com.silabs.cp210x
+
+32. Keynote
+   Path: /Applications/Keynote.app
+   Version: 14.3
+   BundleId: com.apple.iWork.Keynote
+
+33. TunnelBear
+   Path: /Applications/TunnelBear.app
+   Version: 4.1.8
+   BundleId: com.tunnelbear.mac.TunnelBear
+
+34. TI-Diagnostic
+   Path: /Applications/TI-Diagnostic.app
+   Version: 4.6.1
+   BundleId: com.ti.eps.diagnostic.SDATIDiagnostic
+
+35. Brave Browser
+   Path: /Applications/Brave Browser.app
+   Version: 134.1.76.74
+   BundleId: com.brave.Browser
+
+36. Pages
+   Path: /Applications/Pages.app
+   Version: 14.3
+   BundleId: com.apple.iWork.Pages
+
+37. GarageBand
+   Path: /Applications/GarageBand.app
+   Version: 10.4.11
+   BundleId: com.apple.garageband10
+
+38. MATLAB_R2021a
+   Path: /Applications/MATLAB_R2021a.app
+   Version: 9.10.0
+   BundleId: com.mathworks.matlab
+
+39. R
+   Path: /Applications/R.app
+   Version: R 4.4.1 GUI 1.80 Big Sur ARM build
+   BundleId: org.R-project.R
+
+40. Microsoft OneNote
+   Path: /Applications/Microsoft OneNote.app
+   Version: 16.95
+   BundleId: com.microsoft.onenote.mac
+
+41. IntelliJ IDEA CE
+   Path: /Applications/IntelliJ IDEA CE.app
+   Version: 2022.3.2
+   BundleId: com.jetbrains.intellij.ce
+
+42. Messenger
+   Path: /Applications/Messenger.app
+   Version: 233.1.0.8.208
+   BundleId: com.facebook.archon.developerID
+
+43. Wizard101
+   Path: /Applications/Wizard101.app
+   Version: 1.26
+   BundleId: com.kingsisle.wizard101
+
+44. SceneBuilder
+   Path: /Applications/SceneBuilder.app
+   Version: 19.0.0
+   BundleId: com.gluonhq.scenebuilder
+
+45. Microsoft PowerPoint
+   Path: /Applications/Microsoft PowerPoint.app
+   Version: 16.95
+   BundleId: com.microsoft.Powerpoint
+
+46. CLion
+   Path: /Applications/CLion.app
+   Version: 2022.2.1
+   BundleId: com.jetbrains.CLion
+
+47. TI-Nspire CX CAS Student Software
+   Path: /Applications/TI-Nspire CX CAS Student Software.app
+   Version: 5.4.0
+   BundleId: com.ti.et.phoenix.app.Application
+
+48. Anaconda-Navigator
+   Path: /Applications/Anaconda-Navigator.app
+   Version: $PKG_VERSION
+   BundleId: com.anaconda.io
+
+49. Slack
+   Path: /Applications/Slack.app
+   Version: 4.43.49
+   BundleId: com.tinyspeck.slackmacgap
+
+50. iMyFone D-Back
+   Path: /Applications/iMyFone D-Back.app
+   Version: 8.0.1.3
+   BundleId: MF.iMyFone D-Back
+
+51. LTspice
+   Path: /Applications/LTspice.app
+   Version: 17.0.38
+   BundleId: com.analog.LTspice.App
+
+52. RStudio
+   Path: /Applications/RStudio.app
+   Version: 2024.04.2+764
+   BundleId: com.rstudio.desktop
+
+53. Canva
+   Path: /Applications/Canva.app
+   Version: 1.106.0
+   BundleId: com.canva.canvaeditor
+
+54. Discord
+   Path: /Applications/Discord.app
+   Version: 0.0.343
+   BundleId: com.hnc.Discord
+
+55. LockDown Browser
+   Path: /Applications/LockDown Browser.app
+   Version: 2.0.9
+   BundleId: com.Respondus.LockDownBrowser
+
+56. Siri
+   Path: /System/Applications/Siri.app
+   Version: 1.0
+   BundleId: com.apple.siri.launcher
+
+57. Music
+   Path: /System/Applications/Music.app
+   Version: 1.4
+   BundleId: com.apple.Music
+
+58. FindMy
+   Path: /System/Applications/FindMy.app
+   Version: 4.0
+   BundleId: com.apple.findmy
+
+59. QuickTime Player
+   Path: /System/Applications/QuickTime Player.app
+   Version: 10.5
+   BundleId: com.apple.QuickTimePlayerX
+
+60. Chess
+   Path: /System/Applications/Chess.app
+   Version: 3.18
+   BundleId: com.apple.Chess
+
+61. Photo Booth
+   Path: /System/Applications/Photo Booth.app
+   Version: 13.1
+   BundleId: com.apple.PhotoBooth
+
+62. Books
+   Path: /System/Applications/Books.app
+   Version: 6.0
+   BundleId: com.apple.iBooksX
+
+63. Weather
+   Path: /System/Applications/Weather.app
+   Version: 4.0
+   BundleId: com.apple.weather
+
+64. Notes
+   Path: /System/Applications/Notes.app
+   Version: 4.11
+   BundleId: com.apple.Notes
+
+65. Image Capture
+   Path: /System/Applications/Image Capture.app
+   Version: 8.0
+   BundleId: com.apple.Image_Capture
+
+66. Home
+   Path: /System/Applications/Home.app
+   Version: 8.0
+   BundleId: com.apple.Home
+
+67. Freeform
+   Path: /System/Applications/Freeform.app
+   Version: 2.0
+   BundleId: com.apple.freeform
+
+68. Preview
+   Path: /System/Applications/Preview.app
+   Version: 11.0
+   BundleId: com.apple.Preview
+
+69. News
+   Path: /System/Applications/News.app
+   Version: 9.0
+   BundleId: com.apple.news
+
+70. TextEdit
+   Path: /System/Applications/TextEdit.app
+   Version: 1.19
+   BundleId: com.apple.TextEdit
+
+71. Podcasts
+   Path: /System/Applications/Podcasts.app
+   Version: 1.1.0
+   BundleId: com.apple.podcasts
+
+72. System Settings
+   Path: /System/Applications/System Settings.app
+   Version: 15.0
+   BundleId: com.apple.systempreferences
+
+73. TV
+   Path: /System/Applications/TV.app
+   Version: 1.4
+   BundleId: com.apple.TV
+
+74. Stocks
+   Path: /System/Applications/Stocks.app
+   Version: Unknown
+   BundleId: Unknown
+
+75. Mail
+   Path: /System/Applications/Mail.app
+   Version: 16.0
+   BundleId: com.apple.mail
+
+76. Dictionary
+   Path: /System/Applications/Dictionary.app
+   Version: 2.3.0
+   BundleId: com.apple.Dictionary
+
+77. Contacts
+   Path: /System/Applications/Contacts.app
+   Version: 14.0
+   BundleId: com.apple.AddressBook
+
+78. Time Machine
+   Path: /System/Applications/Time Machine.app
+   Version: 1.3
+   BundleId: com.apple.backup.launcher
+
+79. Font Book
+   Path: /System/Applications/Font Book.app
+   Version: 11.0
+   BundleId: com.apple.FontBook
+
+80. FaceTime
+   Path: /System/Applications/FaceTime.app
+   Version: 5.0
+   BundleId: com.apple.FaceTime
+
+81. Shortcuts
+   Path: /System/Applications/Shortcuts.app
+   Version: 7.0
+   BundleId: com.apple.shortcuts
+
+82. Maps
+   Path: /System/Applications/Maps.app
+   Version: 3.0
+   BundleId: com.apple.Maps
+
+83. Mission Control
+   Path: /System/Applications/Mission Control.app
+   Version: 1.2
+   BundleId: com.apple.exposelauncher
+
+84. Stickies
+   Path: /System/Applications/Stickies.app
+   Version: 10.2
+   BundleId: com.apple.Stickies
+
+85. Photos
+   Path: /System/Applications/Photos.app
+   Version: 9.0
+   BundleId: com.apple.Photos
+
+86. Messages
+   Path: /System/Applications/Messages.app
+   Version: 14.0
+   BundleId: com.apple.MobileSMS
+
+87. Calculator
+   Path: /System/Applications/Calculator.app
+   Version: 10.16
+   BundleId: com.apple.calculator
+
+88. VoiceMemos
+   Path: /System/Applications/VoiceMemos.app
+   Version: 2.4
+   BundleId: com.apple.VoiceMemos
+
+89. Launchpad
+   Path: /System/Applications/Launchpad.app
+   Version: 1.0
+   BundleId: com.apple.launchpad.launcher
+
+90. Reminders
+   Path: /System/Applications/Reminders.app
+   Version: 7.0
+   BundleId: com.apple.reminders
+
+91. App Store
+   Path: /System/Applications/App Store.app
+   Version: 3.0
+   BundleId: com.apple.AppStore
+
+92. Clock
+   Path: /System/Applications/Clock.app
+   Version: 1.0
+   BundleId: com.apple.clock
+
+93. Automator
+   Path: /System/Applications/Automator.app
+   Version: 2.10
+   BundleId: com.apple.Automator
+
+94. Calendar
+   Path: /System/Applications/Calendar.app
+   Version: 14.0
+   BundleId: com.apple.iCal
+
+95. Catan Universe
+   Path: /Users/siddharthiyer/Applications/Catan Universe.app
+   Version: 1.0
+   BundleId: Unknown
+
