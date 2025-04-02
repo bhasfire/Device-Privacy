@@ -3,14 +3,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import uvicorn
+import urllib.parse
+
 from installed_apps import get_installed_apps
 from scanner import mac_get_permission_score
 
 app = FastAPI()
 
+# Allow requests from localhost:8000 (frontend)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # You can restrict to ["http://localhost:8000"] if needed
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -33,6 +36,12 @@ async def installed_apps():
         return JSONResponse(content=data)
     except Exception as e:
         return JSONResponse(content={"error": str(e)})
+
+@app.get("/api/privacy/permissions-mac/{app_path:path}")
+async def permissions_mac(app_path: str):
+    decoded_path = urllib.parse.unquote(app_path)
+    score_info = mac_get_permission_score(decoded_path)
+    return JSONResponse(content=score_info)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=5010)
