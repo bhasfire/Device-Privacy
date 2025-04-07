@@ -10,10 +10,9 @@ from scanner import mac_get_permission_score
 
 app = FastAPI()
 
-# Allow requests from localhost:8000 (frontend)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # You can restrict to ["http://localhost:8000"] if needed
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

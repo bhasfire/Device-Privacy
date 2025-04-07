@@ -35,7 +35,8 @@ def generate_cache_key(app_path):
 
 def get_info_plist(plist_path):
     try:
-        result = subprocess.run(['plutil', '-convert', 'json', '-o', '-', plist_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        result = subprocess.run(['plutil', '-convert', 'json', '-o', '-', plist_path],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return json.loads(result.stdout)
     except Exception as e:
         logging.error(f"Error reading Info.plist at {plist_path}: {e}")
@@ -57,7 +58,6 @@ def get_mac_app_permissions(app_path):
                 "id": key,
                 "name": key.replace("NS", "").replace("UsageDescription", ""),
                 "description": mapping["description"],
-                "explanation": info_plist.get(key),
                 "score": mapping["score"]
             })
     total_score = sum(perm["score"] for perm in permissions_found)
@@ -79,23 +79,23 @@ def mac_get_permission_score(app_path):
             return {
                 "score": 0,
                 "permissions": ["Unknown (Path not found)"],
-                "details": [{"name": "error", "description": "Path not found", "score": 0}]
+                "details": [{"description": "Path not found", "score": 0}]
             }
         if not app_path.endswith('.app'):
             return {
                 "score": 0,
                 "permissions": ["Unknown (Not a Mac application)"],
-                "details": [{"name": "error", "description": "Not a Mac application bundle (.app)", "score": 0}]
+                "details": [{"description": "Not a Mac application bundle (.app)", "score": 0}]
             }
         result = get_mac_app_permissions(app_path)
         if "error" in result:
             return {
                 "score": 10,
                 "permissions": [f"Error: {result['error']}"],
-                "details": [{"name": "error", "description": result["error"], "score": 10}]
+                "details": [{"description": result["error"], "score": 10}]
             }
         permission_list = [perm["description"] for perm in result["permissions"]]
-        details_list = [{"name": perm["id"], "description": perm["description"], "score": perm["score"]} for perm in result["permissions"]]
+        details_list = [{"description": perm["description"], "score": perm["score"]} for perm in result["permissions"]]
         total_score = result["totalScore"]
         return {
             "score": total_score,
@@ -107,7 +107,7 @@ def mac_get_permission_score(app_path):
         return {
             "score": 20,
             "permissions": ["Error analyzing application"],
-            "details": [{"name": "error", "description": "Error analyzing application: " + str(e), "score": 20}]
+            "details": [{"description": "Error analyzing application: " + str(e), "score": 20}]
         }
 
 if __name__ == '__main__':

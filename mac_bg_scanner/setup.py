@@ -11,7 +11,7 @@ OPTIONS = {
                 'CFBundleURLSchemes': ['deviceprivacymac']
             }
         ],
-        # 'LSUIElement': True
+        'LSUIElement': True
     },
 }
 
